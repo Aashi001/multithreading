@@ -1,0 +1,22 @@
+//runnable interface
+class mythread implements Runnable {
+    @Override
+    public void run(){
+        Thread.currentThread().setName("aashi");
+        for(int i=0;i<10;i++){
+            System.out.println(Thread.currentThread().getName());
+        }
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+	    mythread obj=new mythread();
+	    Thread obj1=new Thread(obj);
+	    obj1.start();
+	     for(int i=0;i<10;i++){
+        
+		System.out.println("Hello World");
+	     }
+	}
+}
