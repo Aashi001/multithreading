@@ -1,0 +1,16 @@
+class Main extends Thread
+{
+	public static void main(String[] args) {
+	    Thread obj=Thread.currentThread();
+	    obj.setName("aashi");
+	    System.out.println(obj.isAlive());//to check if it is in running state
+	    System.out.println(obj.getName());
+	    System.out.println(obj.isDaemon());//background thread or low priority thread even if is in running state
+	     obj.setPriority(Thread.MAX_PRIORITY);//change the value of priority
+	    System.out.println(obj.getPriority());//norm priority value 5
+	    System.out.println(obj.getId());
+	    System.out.println(obj.getState());
+	    
+	    
+		System.out.println(10/0);
+	}
