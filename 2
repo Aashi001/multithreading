@@ -1,0 +1,29 @@
+//multithreaded application
+class mythread extends Thread
+{
+    public void run()
+    {
+       for(int i=0;i<10;i++){
+            System.out.println("mythread"+i);
+        }
+        System.out.println(10/0);
+    }
+}
+  class Main 
+{
+	public static void main(String[] args) {
+	  // mythread obj=new mythread();
+	   //or 
+	    Thread obj=new mythread();//polumorphic behaviour
+	   
+	   
+	   
+	   obj.start();//compulsory// we can overide start method 
+	   for(int i=0;i<10;i++){
+	       System.out.println("main thread"+1);
+	       
+	   }
+	   
+	   
+	}
+}
