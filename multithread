@@ -1,0 +1,15 @@
+class Main extends Thread{
+
+    public void run(){
+        System.out.println("thread task");
+    }
+    public static void main(String[] args){
+            Main t=new Main();
+            t.start();
+            Main t2=new Main();
+            t2.start();
+        
+        }
+
+
+}
