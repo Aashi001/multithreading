@@ -1,0 +1,13 @@
+class Main extends Thread{
+
+    public void run(){
+        System.out.println("thread example");
+    }
+    public static void main(String[] args){
+            Main t=new Main();
+            t.start();
+        }
+
+
+}
+line 1 3 7 8 are important and should be in this order.
