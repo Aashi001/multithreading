@@ -1,0 +1,14 @@
+class Main extends Thread{
+        public void run(){
+            System.out.println("child thread");
+        }
+    
+    public static void main(String[] args){
+            System.out.println("main thread");
+         Main t=new Main();
+         t.setDaemon(true);           //always before start if not then it provide exception
+         t.start();
+        }
+
+
+}
