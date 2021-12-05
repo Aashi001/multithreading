@@ -1,0 +1,15 @@
+class Main implements Runnable{
+
+    public void run(){
+        System.out.println("thread task");
+    }
+    public static void main(String[] args){
+            Main t=new Main();             //create an object of main class
+            Thread th=new Thread(t);       //create an object of thread class and pass the parameter in costructor.
+            th.start();
+        
+        }
+
+
+}
+better way is runnable because it can extend another class and implements runnable to create thread.
