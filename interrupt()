@@ -1,0 +1,20 @@
+public class Main extends Thread
+{
+    public void run()
+    {
+        try{
+        for(int i=1;i<=5;i++){
+            System.out.println(i);
+            Thread.sleep(1000);                                  //then normal behaviour use of interrupt is waste
+        }
+    }
+    catch(Exception e){
+        e.printStackTrace();
+    }
+    }
+	public static void main(String[] args) {
+		Main t=new Main();
+		t.start();
+		t.interrupt();                           //it goes directly in catch block
+}
+}
